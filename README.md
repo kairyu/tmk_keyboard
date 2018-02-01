@@ -7,6 +7,13 @@ The latest source code is available here: <http://github.com/tmk/tmk_keyboard>
 
 Updates
 -------
+#### 2017/01/11
+Changed action code for `ACTION_LAYER_MODS` and this may cause incompatibility with existent shared URL and downloaded firmwware of keymap editor. If you are using the action you just have to redefine it on keymap editor. Existent keymap code should not suffer.
+
+#### 2016/06/26
+Keymap framework was updated. `fn_actions[]` should be defined as `action_t` instead of `uint16_t`. And default code for keymap handling is now included in core you just need define `uint8_t keymaps[][MATRIX_ROWS][MATRIX_COLS]` and `action_t fn_actions[]`.
+
+
 #### 2016/06/22
 Some projects were moved from `converter` and `keyboard` to `orphan` directory. Those might be removed in some future but you will be able to access them with `orphans` tag. See <https://github.com/tmk/tmk_keyboard/issues/173>
 
